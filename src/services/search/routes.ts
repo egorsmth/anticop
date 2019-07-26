@@ -5,7 +5,7 @@ export default [
     path: "/",
     method: "get",
     handler: async (req: Request, res: Response) => {
-      res.send("Hello world!");
+      res.send("путешествие в тысячу миль начинается с единственного шага, а ты пидор (с) Жак Ив Сталоне");
     }
   },
   {
