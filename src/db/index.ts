@@ -1,3 +1,6 @@
 import {createConnection} from "typeorm";
 
-export default createConnection(process.env.DATABASE_URL || "")
+export default createConnection({
+    type: 'postgres',
+    url: process.env.DATABASE_URL
+})
