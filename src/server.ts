@@ -3,12 +3,13 @@ import express from "express";
 import { applyMiddleware, applyRoutes } from "./utils";
 import routes from "./services";
 import middleware from "./middleware";
+import q from "reflect-metadata";
 
 const router = express();
 applyMiddleware(middleware, router);
 applyRoutes(routes, router);
 
-const { PORT = 3000 } = process.env;
+const PORT = 3000;
 const server = http.createServer(router);
 
 server.listen(PORT, () =>

@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+ web_dev:
+  build: .
+  ports:
+   - "3000:3000"
+  volumes:
+   - .:/app
+  environment:
+   - ENV=development
+   - DATABASE_URL=postgres://postgres:5432/dev_anticop
+ postgresdb:
+  image: postgres:latest
+  container_name: "postgres"
+  volumes:
+   - ./data/db:/var/lib/postgresql/data
+  ports:
+   - "5432:5432"
+networks:
+ default:
+  name: web_dev

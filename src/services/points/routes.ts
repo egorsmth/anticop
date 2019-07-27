@@ -1,7 +1,5 @@
 import { Request, Response } from "express";
-import {Point} from "../../entity/Point";
 import db from "../../db/index";
-
 
 export default [
   {
